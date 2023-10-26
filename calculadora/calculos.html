@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./G-06-calculadora.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <title>calculadora simples</title>
+</head>
+<header class="cabecalho">
+  <div class="logo-title">
+    <img class="cabecalho-imagem" src="../!images/cep_logo.png" alt="Logo da Escola">
+    <h1>Equipe 6</h1>
+  </div>
+  <div class="cabecalho-menu">
+    <ul class="cabecalho-lista">
+      <li class="cabecalho-lista-item"><a href="../G-06-main.html">Voltar -> Main page</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Os nosso projetos</a>
+        <div class="dropdown-content">
+          <a href="../push-button_led_circuit/G-06-pushbutton-led_circuit.html">Push button</a>
+          <a href="../traffic-light_circuit/G-06-trafficlight_circuit.html">Trafic Light</a>
+          <a href="../megasemaforo/G-06-megasemaforo.html">Mega-semáforo</a>
+          <a href="../potenciometro/G-06-potenciometro.html">Potenciometro</a>
+          <a href="../timer/G-06-timer.html">Timer</a>
+          <a href="../centraldesegurança/G-06-cds.html">CDS</a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Em breve...</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+<body>
+  <h1>calculadora simples</h1>
+
+  Primeiro Número<br />
+  <input id="n1" type="number" /><br />
+  Segundo Número<br />
+  <input id="n2" type="number" /><br /><br />
+  <button onclick="somar()">Somar</button>
+  <button onclick="subtrair()">Subtrair</button>
+  <button onclick="multiplicar()">Multiplicar</button>
+  <button onclick="dividir()">Dividir</button>
+  <br /><br />
+  O Resultado é <span></span>
+
+  <script>
+    var n1 = document.querySelector('#n1')
+    var n2 = document.querySelector('#n2')
+    var resultado = document.querySelector('span')
+
+    function somar() {  
+      resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+      if(n1.value == '' || n2.value == '') {
+        window.alert('gosto de ban')
+        resultado.innerHTML = 'balls'
+      }
+    }
+    function subtrair() {
+      resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+      if(n1.value == '' || n2.value == '') {
+        window.alert('gosto de ban')
+        resultado.innerHTML = 'balls'
+    }
+  }
+    function multiplicar() {
+      resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+      if(n1.value == '' || n2.value == '') {
+        window.alert('gosto de ban')
+        resultado.innerHTML = 'balls'
+    }
+  }
+    function dividir() {
+      resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+      if(n1.value == '' || n2.value == '') {
+        window.alert('gosto de ban')
+        resultado.innerHTML = 'balls'
+    }
+  }
+  </script>
+  
+</body>
+</html>
